@@ -1,0 +1,14 @@
+#app {
+  .sidebar-container {
+    width: 200px;
+    height: 100%;
+    background: $base-menu-background;
+    position: fixed;
+  }
+
+  .main-container {
+    margin-left: 200px;
+    min-height: 100%;
+  }
+
+}
