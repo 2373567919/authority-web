@@ -11,7 +11,10 @@ router.beforeEach((to, from, next) => {
     } else {
       if (store.getters.roles.length === 0) {
         store.dispatch('GetInfo').then(res => {
-          next()
+          store.dispatch('GenerateRoutes').then(accessRoutes => {
+            console.log('routes', accessRoutes)
+            next()
+          })
         }).catch(err => {
           ElMessage.error(err.message)
         })

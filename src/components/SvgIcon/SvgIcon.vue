@@ -1,7 +1,5 @@
 <template>
-  <svg :class="svgClassValue">
-    <use :xlink:href="iconNameValue"></use>
-  </svg>
+  <img :class="svgClassValue" :src="iconNameValue" alt="">
 </template>
 
 <script setup>
@@ -25,9 +23,14 @@ const svgClassValue = computed(() => {
   }
 })
 const iconNameValue = computed(() => {
-  return `#icon-${props.iconClass}`
+  return `/svg/${props.iconClass}.svg`
 })
 </script>
 <style scoped>
-
+.svg-icon{
+width: 1.3em;
+height: 1.3em;
+  margin-bottom: 18px;
+  margin-right: 10px;
+}
 </style>

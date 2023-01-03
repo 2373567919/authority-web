@@ -7,6 +7,5 @@ import ElementPlus from 'element-plus'
 import './permission'
 import '@/assets/styles/index.scss'
 import SvgIcon from '@/components/SvgIcon/SvgIcon'
-import '@/assets/icons/index'
 
 createApp(App).use(store).use(router).use(ElementPlus).use(SvgIcon).mount('#app')
